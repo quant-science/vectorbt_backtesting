@@ -15,7 +15,7 @@ price_aapl
 # Profit Level: Buy and Hold Strategy
 pf_buy_hold = vbt.Portfolio.from_holding(
     close=price_aapl, 
-    init_cash=1000
+    init_cash=10_000
 )
 pf_buy_hold.total_profit()
 
@@ -34,7 +34,7 @@ pf_ma_strat = vbt.Portfolio.from_signals(
     close = price_aapl, 
     entries=entries, 
     exits=exits, 
-    init_cash=1000,
+    init_cash=10_000,
     fees=0.001,
 )
 
@@ -63,7 +63,7 @@ pf_100_ma_strats = vbt.Portfolio.from_signals(
     size=np.inf, 
     fees=0.001, 
     freq='1D',
-    init_cash=1000
+    init_cash=10_000
 )
 
 pf_100_ma_strats.total_profit().max()
